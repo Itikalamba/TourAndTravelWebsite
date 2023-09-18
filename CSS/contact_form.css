@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form{
+    position:relative;
+    min-height:100vh;
+    padding:20px 80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:url("/Tourism/Images/background.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form .content1{
+max-width:800px;
+text-align:center;
+}
+.form .content1 h1{
+    font-size:40px;
+    font-weight:700;
+    color: #087DC2;
+    text-shadow: 1px 1px 1px black;
+    padding-bottom:20px;
+}
+.form .content1 p{
+    font-size:18px;
+    font-weight:500;
+    color:black;
+    
+}
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+
+}
+.container .contactinfo{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+}
+.container .contactinfo .box{
+    position:relative;
+    padding:15px 0;
+    display:flex;
+}
+.container .contactinfo .box .icons{
+width:50px;
+height:50px;
+background:white;
+display:flex;
+justify-content: center;
+align-items: center;
+border-radius:50%;
+font-size:18px;
+}
+.container .contactinfo .box .text{
+    display:flex;
+    margin-left:18px;
+    font-size:18px;
+    color:black;
+    flex-direction:column;
+    font-weight:300;
+}
+.container .contactinfo .box .text h3{
+    font-weight:700;
+    color:#087DC2;
+}
+.contactForm{
+width:40%;
+padding:20px;
+background:white;
+}
+.contactForm h1{
+    font-size:30px;
+    color:#087DC2;
+    font-weight:700;
+    margin:10px;
+}
+.contactForm .inputbox{
+    position:relative;
+    width:100%;
+    margin-top:8px;
+}
+.contactForm .inputbox input{
+    width:100%;
+    padding:4px 0;
+    font-size:14px;
+    margin:5px 0;
+    border:none;
+    border-bottom:2px solid #087DC2;
+    outline:none;
+    resize:none;
+
+}
+.contactForm .inputbox span{
+    position:absolute;
+    left:0;
+    padding:3px 0;
+    font-size:14px;
+    margin:5px 0;
+    pointer-events:none;
+    transition:0.5s;
+    color:#087DC2;
+
+
+}
+.contactForm .inputbox input:focus~span,
+.contactForm .inputbox input:valid~span
+
+
+{
+    color:#e91e63;
+    font-size:12px;
+    transform:translateY(-20px);
+}
+.contactForm .inputbox input[type="submit"]{
+    width:100px;
+    background:#087DC2;
+    color:white;
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    font-size:18px;
+
+}
+.text{
+    height:70px;
+}
+@media(max-width:991px){
+    .form{
+        padding:50px;
+    }
+    .container{
+        flex-direction:column;
+    }
+    .container .contactinfo{
+        margin-bottom:40px;
+    }
+    .container .contactinfo,.contactForm{
+        width:100%;
+    }
+}

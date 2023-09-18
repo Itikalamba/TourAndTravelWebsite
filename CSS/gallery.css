@@ -1,0 +1,222 @@
+/* gallery css */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=DynaPuff:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Merienda:wght@400;700&family=Mouse+Memoirs&family=Nunito+Sans:ital,wght@0,600;1,400&family=Pacifico&family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box-1 {
+    display: relative;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 250px);
+}
+
+.item-1 {
+    background-image: url("../Images/torism-2.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-2 {
+    background-image: url("../Images/tourism-pic-for-gallery.jpg");
+    grid-column: 2/4;
+}
+
+.item-3 {
+    background-image: url("../Images/tourism-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-4 {
+    background-image: url("../Images/Amritsar-tour.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-5 {
+    background-image: url("../Images/tour-5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-6 {
+    background-image: url("../Images/tor-6.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-7 {
+    background-image: url("../Images/tour-7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-1 .overlay {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    opacity: 0.4;
+    position: absolute;
+    top: 65px;
+    left: 0;
+}
+
+.box-1 .overlay-text {
+    position: absolute;
+    top: 37%;
+    left: 44%;
+    font-family: 'Merienda', cursive;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.overlay-text h1 {
+    display: inline-block;
+    background-color: white;
+    padding: 0 15px;
+}
+
+
+/*..... cards start here..... */
+.wrapper {
+    padding: 70px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, white, #087DC2, white);
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.card {
+
+    height: 300px;
+    width: 30%;
+    background-color: blue;
+    transition: 0.5s ease-in-out;
+    position: relative;
+
+
+}
+
+.card .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    z-index: 999;
+    transition: 0.5s ease-in-out;
+}
+
+.card .info h1,
+p {
+    color: white;
+}
+
+.card .info p {
+    margin-bottom: 5px;
+}
+
+.card .info a {
+    padding: 2px 10px;
+    background-color: white;
+}
+
+.card-1 {
+    background-image: url("../Images/tour-5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-2 {
+
+    background-image: url("https://i.ytimg.com/vi/rMAvhWQvLzE/maxresdefault.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-3 {
+    background-image: url("../Images/Amritsar-tour.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-4 {
+    background-image: url("https://static.businessworld.in/article/article_extra_large_image/1493620631_7nMex6_Taj-Shutt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-5 {
+    background-image: url("../Images/india-gate.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-6 {
+    background-image: url("https://www.hdwallpapers.in/download/bridge_of_alexander_with_lights_france_paris_with_background_of_clouds_and_sky_4k_5k_hd_travel-HD.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-card {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    display: none;
+    top: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card:hover .overlay-card {
+    display: block;
+    opacity: 0.5;
+}
+
+.card:hover .info {
+    display: block;
+}
+
+.row .indian-tour {
+    color: white;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+/* gallery css ends  */

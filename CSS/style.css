@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Mouse+Memoirs&family=Nunito+Sans:ital,wght@0,600;1,400&family=Pacifico&family=Roboto+Condensed:wght@400;700&family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=DynaPuff:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Mouse+Memoirs&family=Nunito+Sans:ital,wght@0,600;1,400&family=Pacifico&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-white: #fff;
+    --clr-black: black;
+    --heading: 'DynaPuff', cursive;
+    --navfont: 'Dosis', sans-serif;
+    --heading-font: 'Sofia', cursive;
+    --transitionSpeed: .3s;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ....Welcome banner styling starts from here... */
+.overlay-banner {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-black);
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9998;
+}
+
+.banner-content {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 8px;
+    background-color: white;
+    background-image: url("https://www.pngplay.com/wp-content/uploads/8/World-Travel-PNG-Free-File-Download.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 600px;
+    z-index: 9999;
+}
+
+.banner-work {
+    margin: 30;
+    text-align: center;
+}
+
+.cross {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.heading {
+    font-family: 'DynaPuff', cursive;
+    margin: 10px;
+}
+
+.heading span {
+    color: #EF5B0C;
+}
+
+.banner-work h4,
+h5 {
+    margin-bottom: 10px;
+}
+
+.boxes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.boxes .box {
+    border: 1px solid #EF5B0C;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.boxes .box .head {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.boxes .box .body {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+h1,
+h4,
+h5 {
+    margin: 0;
+}
+
+.yellow {
+    color: #FEDB39;
+}
+
+.banner-work .btn {
+    border: 2px solid #EF5B0C;
+    border-radius: 12px;
+    background-color: #EF5B0C;
+    color: white;
+}
+
+.banner-work .btn:hover {
+    color: black;
+    background: transparent;
+}
+
+.banner-work img {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+/* ....banner ends here... */
+/* ...navigator bar starts here... */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar {
+    padding: 2px;
+    background-color: blue;
+}
+
+.navbar .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+}
+
+.nav ul {
+    display: flex;
+    margin-block-end: 0;
+    gap: 20px;
+
+}
+
+.nav .list-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.list-div .icon-box {
+    padding: 0px 6px;
+    border: 1px solid white;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a i {
+    color: white;
+    font-size: 15px;
+}
+
+/* ..navigation starts here.. */
+/* .navigation {
+
+    padding: 5px;
+    position: sticky;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: white;
+}
+
+.navigation .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-content .nav-text .ul-list {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    gap: 40px;
+}
+
+.nav-content .logo .logo-pic {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/317/317528.png");
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+}
+
+.search {
+    margin: 0 20px;
+}
+
+.logo-text span {
+    color: #EF5B0C;
+
+}
+
+.nav-text a {
+    font-size: 22px;
+    font-family: var(--navfont);
+    font-weight: 600;
+    color: #777;
+}
+
+.nav-text a:hover {
+    color: black;
+}
+
+.logo .logo-text {
+    font-family: var(--heading);
+    font-size: 25px;
+}
+.nav-text .list-drop{
+    padding:20px;
+    background-color: aqua;
+    position:absolute;
+    top:100%;
+} */
+.navigation a {
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navigation .nav-list {
+    margin-left: 18rem;
+    margin-right: 2rem;
+    padding: 10px;
+    height: 100%;
+}
+
+.navigation .nav-list>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.anchor::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #087DC2;
+    bottom: 15px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+
+}
+
+.navigation .nav-list .anchor:hover:before {
+    bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.navigation .nav-list ul .anchor {
+    position: relative;
+    text-transform: uppercase;
+    color: #777;
+    transition: .3s;
+    padding: 17px 0;
+}
+
+.navigation .logo {
+    font-size: 50px;
+    padding: 15px;
+}
+
+.navigation .nav-list .first-ul>li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.navigation .nav-list li:hover .anchor {
+    color: black;
+}
+
+.drop-down {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 2px solid #087DC2;
+    transition: .3s linear;
+
+}
+
+.drop-down .drop li>a {
+    color: black;
+}
+
+.drop-btn:hover .drop-down {
+    opacity: 1;
+    visibility: visible;
+}
+
+.list-in {
+    border-bottom: 1px solid #777;
+}
+
+.drop-down .drop li,
+a {
+    position: relative;
+}
+
+.inner-a {
+    display: block;
+    height: 100%;
+    padding: 10px 25px;
+    text-transform: uppercase;
+
+}
+
+.inner-a::before {
+    content: "";
+    width: 5px;
+    height: 25px;
+    background-color: #087DC2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.inner-a:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* main section styling starts from here */
+
+/* package section */
+.package-section {
+    padding: 4rem 7rem;
+    background-image: url('/Images/package-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.package-section .icon span i {
+    color: grey;
+}
+
+.package-section .icon span {
+    position: relative;
+    font-size: 2rem;
+}
+
+.package-section .icon span::before,
+.package-section .icon span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 1px;
+    background-color: grey;
+}
+
+.package-section .icon span::before {
+    left: -160px;
+    transform: translateY(-50%);
+}
+
+.package-section .icon span::after {
+    left: 40px;
+    transform: translateY(-50%);
+}
+
+.package-section .card {
+    border: none;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.package-section .card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-black);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transitionSpeed);
+}
+
+.package-section .card:hover .card-overlay {
+    opacity: .48;
+}
+
+.package-section .card .ribbon {
+    position: absolute;
+    top: 0;
+    color: var(--clr-white);
+    padding: 10px 15px;
+    border-radius: 15px 0 20px 0;
+}
+
+.package-section .card .first-child {
+    background: red;
+}
+
+.package-section .card .second-child {
+    background: #f60;
+}
+
+.package-section .card .last-child {
+    background-color: #e54faf;
+}
+
+.package-section .card .strip {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.package-section .card .circle {
+    position: absolute;
+    bottom: 32px;
+    right: 30px;
+    background-color: yellow;
+    color: var(--clr-black);
+    border: 3px solid var(--clr-white);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: var(--transitionSpeed);
+}
+
+.package-section .card:hover .circle {
+    transform: scale(1.1);
+}
+
+/* package section ends */
+/* main section styling ends here */
